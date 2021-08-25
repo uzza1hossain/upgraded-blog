@@ -76,7 +76,9 @@ class Comment(db.Model):
     parent_post = db.relationship('BlogPost', back_populates='comments')
     text = db.Column(db.Text, nullable=False)
 
+
 db.create_all()
+
 
 #Create admin_required decorator
 def admin_required(f):
